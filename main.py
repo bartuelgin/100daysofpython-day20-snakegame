@@ -10,6 +10,7 @@ screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Snake Game 3310")
 screen.tracer(0)
+print("test git")
 
 # body_1 = Turtle()
 # body_1.shape("square")
