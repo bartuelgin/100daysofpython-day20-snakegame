@@ -10,7 +10,7 @@ screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Snake Game 3310")
 screen.tracer(0)
-print("test git")
+
 
 # body_1 = Turtle()
 # body_1.shape("square")
@@ -68,16 +68,18 @@ while game_is_on:
 
     #detect collision with wall
     if (snake.head.xcor() > 285) or (snake.head.xcor() < -285) or (snake.head.ycor() >285) or (snake.head.ycor() < -285):
-        game_is_on = False
-        scoreboard.game_over()
+        #game_is_on = False
+        scoreboard.reset()
+        snake.reset()
 
     #detect collision with wall
     for segment in snake.segments[1:]:
         # if segment == snake.head:
         #     pass
         if snake.head.distance(segment) < 10:
-            game_is_on = False
-            scoreboard.game_over()
+            #game_is_on = False
+            scoreboard.reset()
+            snake.reset()
     #if head colllides with any segment in the tail:
     #   trigger game_ver
 
